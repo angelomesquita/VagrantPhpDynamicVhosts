@@ -12,11 +12,16 @@ Um exemplo de máquina virtual baseada no Debian Linux com Vhosts Dinâmicos com
 
 ##Como usar essa máquina:
 
-1.Clone o repositório ou Baixe o arquivo Zipado.
-2.Verifique o caminho da Box no Arquivo Vagrantfile, adcione o caminho da Box que foi feito o Download.
+1.Clone o repositório ou Baixe o arquivo Zipado.()
+2.Verifique o caminho da Box no Arquivo Vagrantfile, adcione o caminho da Box que foi feito o Download.()
 3.No Terminal, execute vagrant up
-4.Após a instalação digite na url : 127.0.0.1:8080 para verificar se está suficionando, se não conseguir acessar o servidor, e estiver aparecendo uma mensagem dizendo que você não tem permissão para acessar o servidor, você precisa da permissão de leitura e escrita na pasta do repositório da box, e na pasta vhosts depois feito isso e so criar normalmente as pastas dentro do vhosts, política de segurança do Linux!
-5. Agora vamos deixar a url mais amigável para o seu desenvolvimento, para isso vamos instalar um programa que faz esse serviço, ele cria um cache de DNS local, mais sobre o assunto nesse link aqui http://blog.davidsonpaulo.com/2012/08/como-usar-o-dnsmasq-para-criar-um-cache-de-dns-local.html.
+4.Após a instalação digite na url : 127.0.0.1:8080 para verificar se está suficionando, se não conseguir acessar o servidor, 
+e estiver aparecendo uma mensagem dizendo que você não tem permissão para acessar o servidor, você precisa da permissão
+ de leitura e escrita na pasta do repositório da box, e na pasta vhosts depois feito isso e so criar normalmente as 
+ pastas dentro do vhosts, política de segurança do Linux!
+5. Agora vamos deixar a url mais amigável para o seu desenvolvimento, para isso vamos instalar um programa que faz esse serviço, 
+ele cria um cache de DNS local, mais sobre o assunto nesse [link aqui](http://blog.davidsonpaulo.com/2012/08/como-usar-o-dnsmasq-para-criar-um-cache-de-dns-local.html)
+
 6.DnsMasq(Linux/Mac) basta abrir o terminal e digitar: 
 * sudo apt-get install dnsmasq
 * Após concluir a instalação, vamos configurar o dnsmasq, acesse o arquivo dnsmasq.conf que está localizado no diretório /etc/ : sudo nano /etc/dnsmasq.conf
