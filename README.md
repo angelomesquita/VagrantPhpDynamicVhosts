@@ -32,6 +32,7 @@ ele cria um cache de DNS local, mais sobre o assunto nesse [link aqui](http://bl
 * Adcione as seguintes linhas: 
 
 listen-address=127.0.0.1
+
 address=/.dev/127.0.0.1
 
 * feche e salve o arquivo.
