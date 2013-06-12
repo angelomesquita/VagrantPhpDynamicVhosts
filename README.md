@@ -23,7 +23,7 @@ e estiver aparecendo uma mensagem dizendo que você não tem permissão para ace
 de leitura e escrita na pasta do repositório da box, e na pasta vhosts depois feito isso e so criar normalmente as 
 pastas dentro do vhosts, política de segurança do Linux!
 
-5. Agora vamos deixar a url mais amigável para o seu desenvolvimento, para isso vamos instalar um programa que faz esse serviço, 
+5.Agora vamos deixar a url mais amigável para o seu desenvolvimento, para isso vamos instalar um programa que faz esse serviço, 
 ele cria um cache de DNS local, mais sobre o assunto nesse [link aqui](http://blog.davidsonpaulo.com/2012/08/como-usar-o-dnsmasq-para-criar-um-cache-de-dns-local.html)
 
 6.DnsMasq(Linux/Mac) basta abrir o terminal e digitar: 
