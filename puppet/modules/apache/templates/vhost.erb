@@ -1,15 +1,16 @@
 <VirtualHost *:80>
-	ServerName dev.com
 	ServerAdmin admin@admin.com
-
-	DocumentRoot /vagrant/www
+	VirtualDocumentRoot "/vagrant/vhosts/%1/public"
+	ServerName vhosts.dev
+	ServerAlias *.dev
+	UseCanonicalName Off
 	
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
 	
-	<Directory /vagrant/www/>
+	<Directory "/vagrant/vhosts/*">
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny
@@ -20,3 +21,26 @@
 	LogLevel warn
 	CustomLog /var/log/apache2/access.log combined
 </VirtualHost>
+
+#<VirtualHost *:80>
+#	ServerName dev.com
+#	ServerAdmin admin@admin.com
+
+#	DocumentRoot /vagrant/www
+	
+#	<Directory />
+#		Options FollowSymLinks
+#		AllowOverride None
+#	</Directory>
+	
+#	<Directory /vagrant/www/>
+#		Options Indexes FollowSymLinks MultiViews
+#		AllowOverride All
+#		Order allow,deny
+#		allow from all
+#	</Directory>
+
+#	ErrorLog /var/log/apache2/error.log
+#	LogLevel warn
+#	CustomLog /var/log/apache2/access.log combined
+#</VirtualHost>
