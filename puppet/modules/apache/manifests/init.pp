@@ -14,10 +14,19 @@ class apache
             enable      => true,
             require     => Package['apache2'],
             subscribe   => [
+		File["/etc/apache2/mods-enabled/vhost_alias.load"],
                 File["/etc/apache2/mods-enabled/rewrite.load"],
                 File["/etc/apache2/sites-available/default"],
                 File["/etc/apache2/conf.d/phpmyadmin.conf"]
             ],
+    }
+
+    file 
+    { 
+        "/etc/apache2/mods-enabled/vhost_alias.load":
+            ensure  => link,
+            target  => "/etc/apache2/mods-available/vhost_alias.load",
+            require => Package['apache2'],
     }
 
     file 
@@ -44,3 +53,4 @@ class apache
             require => Package['apache2'],
     }
 }
+
